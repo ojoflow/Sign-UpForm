@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up</title>
     <link rel="stylesheet" href="style.css">
+    <script src="password.js"></script>
 </head>
 <body>
    
@@ -24,7 +25,7 @@
                    </div>
                
             </div>
-            <form action="#0" method="post"> 
+            <form action="#0" method="get" onsubmit="return checkPasswords()"> 
                     <div class="form-head">
                         <p>
                             This is not a real online service! Sign up to place online orders. Get benefits like coupons
@@ -42,31 +43,32 @@
                             <div class="flex">
                                 <div class="name">
                                     <div>
-                                     <label for="first_name">First Name</label>
-                                     <input type="text" id="first_name" name="first_name">
+                                     <label for="first_name">FIRST NAME</label>
+                                     <input type="text" id="first_name" name="first_name" autofocus="" required="">
                                     </div>
                                     <div>        
-                                     <label for="last_name">Last Name</label>
+                                     <label for="last_name">LAST NAME</label>
                                      <input type="text" id="last_name" name="last_name">
                                     </div>
                                 </div>
                                 <div class="email-phone">
                                     <div> 
-                                    <label for="email">Email</label>
+                                    <label for="email">EMAIL</label>
                                      <input type="email" id="email" name="email" required>
                                     </div>    
                                     <div>
-                                     <label for="phone number">Phone Number</label>
+                                     <label for="phone number">PHONE NUMBER</label>
                                      <input type="tel" id="phone_number" name="phone_number" required>
                                     </div>
                                 </div>
                                 <div class="password">
                                     <div>
-                                     <label for="user_password">Password:</label>
-                                     <input type="password" id="user_password" name="password">
+                                     <label for="user_password">PASSWORD:</label>
+                                     <input type="password" id="user_password" name="password" required>
+                                     <p id="passmatch" class="hidden">*Passwords do not match</p>
                                     </div>
                                     <div>    
-                                     <label for="confirm_password">Confirm Password</label>
+                                     <label for="confirm_password">CONFIRM PASSWORD</label>
                                      <input type="password" id="confirm_password" name="confirm_password">
                                     </div>
                                 </div>
@@ -75,7 +77,7 @@
                    
                    <div class="form-submit">
                    <button class="create-account">create account</button>
-                   <p class="login">Already have an account? <a>Log in</a></p>
+                   <p class="login">Already have an account? <a href="">Log in</a></p>
                    </div>
             </form>
         

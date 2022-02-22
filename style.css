@@ -146,6 +146,24 @@ input:invalid {
 input:valid {
     border-color: green;
   }
+.password div {
+    display: flex;
+    flex-wrap: wrap
+}
+.password > div:first-of-type {
+    position: relative;
+}
+#passmatch {
+    position: absolute;
+    top: 36px;
+    color: red;
+    font-size: 1rem;
+    
+    
+} 
+.hidden {
+    visibility: hidden;
+} 
 button {
     margin: 2rem 3rem;
     padding: .85rem 3rem;
